@@ -1,0 +1,10 @@
+mongoDB_Pass = IxToRGuPDCKy7k8T
+
+mongoDB_connection_string = mongosh "mongodb+srv://cluster0.zmtej.mongodb.net/" --apiVersion 1 --username aka-mern-blog
+
+mongosh "mongodb+srv://cluster0.zmtej.mongodb.net/" --apiVersion 1 --username aka-mern-blog
+
+compass = mongodb+srv://aka-mern-blog:IxToRGuPDCKy7k8T@cluster0.zmtej.mongodb.net/
+
+
+mongodb+srv://aka-mern-blog:IxToRGuPDCKy7k8T@cluster0.zmtej.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
