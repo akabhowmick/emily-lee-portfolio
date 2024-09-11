@@ -3,11 +3,30 @@ const { Schema, model } = mongoose;
 
 const PostSchema = new Schema(
   {
-    title: String,
-    summary: String,
-    content: String,
-    cover: String,
-    author: { type: Schema.Types.ObjectId, ref: "User" },
+    title: {
+      type: String,
+      required: true,
+      trim: true,
+      maxlength: 100, // Optional: Limit title length
+    },
+    summary: {
+      type: String,
+      required: true,
+      maxlength: 250, // Optional: Limit summary length
+    },
+    content: {
+      type: String,
+      required: true,
+    },
+    cover: {
+      type: String,
+      required: true, // Make sure a cover image is provided
+    },
+    author: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true, // Ensure the post has an author
+    },
   },
   {
     timestamps: true,

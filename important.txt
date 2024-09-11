@@ -2,9 +2,33 @@ mongoDB_Pass = IxToRGuPDCKy7k8T
 
 mongoDB_connection_string = mongosh "mongodb+srv://cluster0.zmtej.mongodb.net/" --apiVersion 1 --username aka-mern-blog
 
+mongodb+srv://aka-mern-blog:<password>@cluster0.zmtej.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
 mongosh "mongodb+srv://cluster0.zmtej.mongodb.net/" --apiVersion 1 --username aka-mern-blog
+
 
 compass = mongodb+srv://aka-mern-blog:IxToRGuPDCKy7k8T@cluster0.zmtej.mongodb.net/
 
 
 mongodb+srv://aka-mern-blog:IxToRGuPDCKy7k8T@cluster0.zmtej.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+https://www.youtube.com/watch?v=xKs2IZZya7c&t=4s
+https://github.com/dejwid/mern-blog/blob/master/api/index.js
+http://localhost:5173/register
+
+https://account.mongodb.com/account/login?n=https%3A%2F%2Fcloud.mongodb.com%2Fv2%2F66b39748a7842a601575b755&nextHash=%23metrics%2FreplicaSet%2F66b397e865507f3a79f7fda1%2Fexplorer%2Ftest%2Fusers%2Ffind&signedOut=true
+
+
+//front end 
+npm run dev 
+
+
+// backend 
+cd api
+nodemon index.js
+
+
+https://github.com/dejwid/mern-blog/blob/master/api/index.js
+https://cloud.mongodb.com/v2/66b39748a7842a601575b755#/metrics/replicaSet/66b397e865507f3a79f7fda1/explorer/test/users/find
+https://www.youtube.com/watch?v=xKs2IZZya7c&t=4s 1hr:41
