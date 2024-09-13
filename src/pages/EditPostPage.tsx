@@ -20,23 +20,30 @@ export default function EditBlogPost() {
     });
   }, [id]);
 
+
   async function updatePost(ev: FormEvent<HTMLFormElement>) {
     ev.preventDefault();
+
     const data = new FormData();
     data.set("title", title);
     data.set("summary", summary);
     data.set("content", content);
-    // data.set("id", id);
+    data.set("id", id!);
+
+    // Check if there is a file to upload
     if (files?.[0]) {
-      data.set("file", files?.[0]);
+      data.set("file", files[0]);
     }
-    const response = await fetch("http://localhost:4000/post", {
-      method: "PUT",
+
+    // Send the PATCH request to update the post
+    const response = await fetch(`http://localhost:4000/post/`, {
+      method: "PATCH",
       body: data,
       credentials: "include",
     });
+
     if (response.ok) {
-      setRedirect(true);
+      setRedirect(true); // Assuming this handles redirection after a successful update
     }
   }
 

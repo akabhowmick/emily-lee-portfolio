@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <header>
       <Link to="/" className="logo">
-        MyBlog
+        Angela Blogs! 
       </Link>
       <nav>
         {username && (

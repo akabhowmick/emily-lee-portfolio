@@ -9,7 +9,7 @@ export const BlogPost = ({ post }: { post: BlogPostInfo }) => {
     <div className="post">
       <div className="image">
         <Link to={`/post/${_id}`}>
-          <img src={"http://localhost:4000/" + cover} alt="" />
+          <img src={`http://localhost:4000/${cover}`} alt="" />
         </Link>
       </div>
       <div className="texts">
@@ -21,7 +21,8 @@ export const BlogPost = ({ post }: { post: BlogPostInfo }) => {
           <time>{formatISO9075(new Date(createdAt))}</time>
         </p>
         <p className="summary">{summary}</p>
-        <div>{content}</div>
+        {/* TODO limit the characters here */}
+        <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     </div>
   );

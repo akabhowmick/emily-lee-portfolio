@@ -19,6 +19,20 @@ export default function BlogPostPage() {
 
   if (!postInfo) return "";
 
+  async function deletePost(postId: string) {
+    const response = await fetch(`http://localhost:4000/post/${postId}`, {
+      method: "DELETE",
+      credentials: "include", // Ensure that cookies (for auth) are included
+    });
+
+    if (response.ok) {
+      alert("Post deleted successfully");
+      // Handle any post-deletion logic like refreshing the list of posts
+    } else {
+      alert("Failed to delete the post");
+    }
+  }
+
   return (
     <>
       <div className="post-page">
@@ -43,6 +57,23 @@ export default function BlogPostPage() {
                 />
               </svg>
               Edit this post
+            </Link>
+            <Link className="delete-btn" to={`/`} onClick={() => deletePost(postInfo._id)}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 9l-1.5 10.5A2.25 2.25 0 0115.75 21H8.25A2.25 2.25 0 015.5 19.5L4 9m5 0v6m5-6v6M10 4.5h4M6.75 4.5h10.5M8.25 4.5V3.75A1.5 1.5 0 019.75 2.25h4.5a1.5 1.5 0 011.5 1.5V4.5"
+                />
+              </svg>
+              Delete this post
             </Link>
           </div>
         )}

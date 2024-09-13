@@ -1,5 +1,5 @@
 import "react-quill/dist/quill.snow.css";
-import { FormEvent, useState } from "react";
+ import { FormEvent, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { Editor } from "../components/Editor";
 
