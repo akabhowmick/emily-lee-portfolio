@@ -172,8 +172,15 @@ app.post("/register", async (req, res) => {
 // Get profile information based on token
 app.get("/profile", (req, res) => {
   const { token } = req.cookies;
+  // Check if the token is missing
+  if (!token) {
+    return res.status(401).json({ error: "Token is missing" });
+  }
   jwt.verify(token, secret, {}, (err, info) => {
-    if (err) throw err;
+    if (err) {
+      return res.status(403).json({ error: "Token is invalid" });
+    }
+    // Send user info if token is valid
     res.json(info);
   });
 });

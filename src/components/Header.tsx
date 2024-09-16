@@ -31,6 +31,7 @@ export default function Header() {
         Angela Blogs! 
       </Link>
       <nav>
+        <Link to="/">Home</Link>
         {username && (
           <>
             <Link to="/create">Create new post</Link>
