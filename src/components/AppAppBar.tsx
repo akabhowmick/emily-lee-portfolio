@@ -11,12 +11,15 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useUserContext } from "../providers/UserContext";
 
+// Styling for the toolbar
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  flexShrink: 0,
   borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
   backdropFilter: "blur(24px)",
   border: "1px solid",
@@ -28,76 +31,136 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function AppAppBar() {
   const [open, setOpen] = React.useState(false);
+  const { setUserInfo, userInfo } = useUserContext();
 
-  const toggleDrawer = (newOpen: boolean) => () => {
-    setOpen(newOpen);
+  // Fetch user info on component mount
+  useEffect(() => {
+    fetch("http://localhost:4000/profile", {
+      credentials: "include",
+    }).then((response) => {
+      response.json().then((userInfo) => {
+        setUserInfo(userInfo);
+      });
+    });
+  }, [setUserInfo]);
+
+  // Logout function
+  const logout = () => {
+    fetch("http://localhost:4000/logout", {
+      credentials: "include",
+      method: "POST",
+    });
+    setUserInfo({});
   };
 
-  const links = ["Angela Blogs", "About Me", "Create a post"];
+  // Define navigation links
+  const linksWithPaths = [
+    { name: "Angela Blogs", path: "/" },
+    { name: "About Me", path: "/about" },
+    { name: "Create a post", path: "/create" },
+  ];
+
+  const logInOptions = [
+    { name: "Sign In", path: "/login" },
+    { name: "Sign Up", path: "/register" },
+  ];
+
+  // Navigation Links rendered based on device type (mobile/desktop)
+  const NavLinkButton = (menuType: string, link: { name: string; path: string }) => {
+    const linkElement = (
+      <Link to={link.path} key={link.name}>
+        {menuType === "mobile" ? (
+          <MenuItem>{link.name}</MenuItem>
+        ) : (
+          <Button variant="text" color="info" size="medium" sx={{ minWidth: 64 }}>
+            {link.name}
+          </Button>
+        )}
+      </Link>
+    );
+    return linkElement;
+  };
+
+  // Refactored Login Box
+  const LogInBox = () => {
+    return (
+      <>
+        {logInOptions.map((option) => (
+          <Link to={option.path} key={option.name}>
+            <MenuItem>
+              <Button
+                color="primary"
+                variant={option.name === "Sign In" ? "outlined" : "contained"}
+                fullWidth
+              >
+                {option.name}
+              </Button>
+            </MenuItem>
+          </Link>
+        ))}
+      </>
+    );
+  };
 
   return (
     <AppBar
       position="fixed"
-      sx={{ boxShadow: 0, bgcolor: "transparent", backgroundImage: "none", mt: 3 }}
+      sx={{
+        boxShadow: 0,
+        bgcolor: "transparent",
+        backgroundImage: "none",
+        mt: 3,
+      }}
     >
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center", px: 0 }}>
+            {/* Desktop Links */}
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              {links.map((link) => {
-                return (
-                  <Button key={link} variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                    {link}
-                  </Button>
-                );
-              })}
+              {linksWithPaths.map((link) => NavLinkButton("not_mobile", link))}
             </Box>
           </Box>
-          <Box
-            sx={{
-              display: { xs: "none", md: "flex" },
-              gap: 1,
-              alignItems: "center",
-            }}
-          >
-            <Button color="primary" variant="text" size="small">
-              Sign in
-            </Button>
-            <Button color="primary" variant="contained" size="small">
-              Sign up
-            </Button>
+
+          {/* Desktop Login Buttons */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1, alignItems: "center" }}>
+            {userInfo?.username ? (
+              <>
+                <Button color="primary" variant="text" size="medium" onClick={logout}>
+                  Logout ({userInfo.username})
+                </Button>
+              </>
+            ) : (
+              LogInBox()
+            )}
           </Box>
+
+          {/* Mobile Menu */}
           <Box sx={{ display: { sm: "flex", md: "none" } }}>
-            <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
+            <IconButton aria-label="Menu button" onClick={() => setOpen(true)}>
               <MenuIcon />
             </IconButton>
-            <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
+            <Drawer anchor="top" open={open} onClose={() => setOpen(false)}>
               <Box sx={{ p: 2, backgroundColor: "background.default" }}>
                 <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
+                  sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}
                 >
-                  <IconButton onClick={toggleDrawer(false)}>
+                  <IconButton onClick={() => setOpen(false)}>
                     <CloseRoundedIcon />
                   </IconButton>
                 </Box>
                 <Divider sx={{ my: 3 }} />
-                {links.map((link) => {
-                  return <MenuItem key={link}>{link}</MenuItem>;
-                })}
-                <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
-                    Sign up
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
-                  </Button>
-                </MenuItem>
+                {/* Mobile Links */}
+                {linksWithPaths.map((link) => NavLinkButton("mobile", link))}
+                {/* Mobile Login Box */}
+                {userInfo?.username ? (
+                  <MenuItem>
+                    <Button color="primary" variant="outlined" fullWidth onClick={logout}>
+                      Logout ({userInfo.username})
+                    </Button>
+                  </MenuItem>
+                ) : (
+                  LogInBox()
+                )}
               </Box>
             </Drawer>
           </Box>
