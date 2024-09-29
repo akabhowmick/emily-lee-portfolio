@@ -21,19 +21,18 @@ export default function Footer() {
   return (
     <React.Fragment>
       <Container
+        className="text-white"
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: { xs: 4, sm: 8 },
-          py: { xs: 8, sm: 10 },
           textAlign: { sm: "center", md: "left" },
         }}
       >
         <Box
           sx={{
-            pt: { xs: 4, sm: 8 },
+            pt: { xs: 3, sm: 3 },
             width: "100%",
             borderTop: "1px solid",
             borderColor: "divider",

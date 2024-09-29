@@ -72,7 +72,7 @@ export default function AppAppBar() {
         {menuType === "mobile" ? (
           <MenuItem>{link.name}</MenuItem>
         ) : (
-          <Button variant="text" color="info" size="medium" sx={{ minWidth: 64 }}>
+          <Button variant="text" color="primary" size="medium" sx={{ minWidth: 64 }}>
             {link.name}
           </Button>
         )}

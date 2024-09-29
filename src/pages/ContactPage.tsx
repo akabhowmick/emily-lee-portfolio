@@ -5,31 +5,32 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-export default function RegisterPage() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+export default function ContactPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  async function register(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const response = await fetch("http://localhost:4000/register", {
+    const contactDetails = { name, email, message };
+    const response = await fetch("http://localhost:4000/contact", {
       method: "POST",
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify(contactDetails),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.status === 200) {
-      alert("Registration successful");
+      alert("Message sent successfully");
     } else {
-      alert("Registration failed");
+      alert("Failed to send message");
     }
   }
 
   return (
-    <Container maxWidth="md" className="mt-8">
+    <Container maxWidth="sm" className="mt-8">
       <Box
         component="form"
-        onSubmit={register}
-        className="p-6 w-full text-blue-700 "
+        onSubmit={handleSubmit}
         sx={{
           backgroundColor: "white",
           padding: 4,
@@ -41,25 +42,34 @@ export default function RegisterPage() {
         }}
       >
         <Typography variant="h4" component="h1" align="center">
-          Register
+          Contact Me
         </Typography>
         <TextField
-          label="Username"
+          label="Name"
           variant="outlined"
           fullWidth
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <TextField
-          label="Password"
-          type="password"
+          label="Email"
+          type="email"
           variant="outlined"
           fullWidth
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <TextField
+          label="Message"
+          variant="outlined"
+          fullWidth
+          multiline
+          rows={4}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
         <Button type="submit" variant="contained" color="primary" sx={{ mt: 2 }} fullWidth>
-          Register
+          Send Message
         </Button>
       </Box>
     </Container>

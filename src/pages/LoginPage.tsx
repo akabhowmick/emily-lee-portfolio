@@ -1,6 +1,11 @@
 import { FormEvent, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { useUserContext } from "../providers/UserContext";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
@@ -29,23 +34,45 @@ export default function LoginPage() {
   if (redirect) {
     return <Navigate to={"/"} />;
   }
-   
+
   return (
-    <form className="login" onSubmit={login}>
-      <h1>Login</h1>
-      <input
-        type="text"
-        placeholder="username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button>Login</button>
-    </form>
+    <Container maxWidth="md" className="mt-8">
+      <Box
+        component="form"
+        onSubmit={login}
+        className="p-6 w-full text-blue-700 "
+        sx={{
+          backgroundColor: "white",
+          padding: 4,
+          borderRadius: 2,
+          boxShadow: 3,
+          display: "flex",
+          flexDirection: "column",
+          gap: 2,
+        }}
+      >
+        <Typography variant="h4" component="h1" align="center">
+          Login
+        </Typography>
+        <TextField
+          label="Username"
+          variant="outlined"
+          fullWidth
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <TextField
+          label="Password"
+          type="password"
+          variant="outlined"
+          fullWidth
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button type="submit" variant="contained" color="primary" sx={{ mt: 2 }} fullWidth>
+          Login
+        </Button>
+      </Box>
+    </Container>
   );
 }
