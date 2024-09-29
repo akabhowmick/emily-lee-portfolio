@@ -157,8 +157,8 @@ export const getDesignTokens = (mode: PaletteMode) => {
       },
       divider: mode === "dark" ? alpha(gray[700], 0.6) : alpha(gray[300], 0.4),
       background: {
-        default: "hsl(0, 0%, 99%)",
-        paper: "hsl(220, 35%, 97%)",
+        default: "#d0d8ff", // light purple color
+        paper: "hsl(220, 35%, 97%)", // keep paper background as is or modify if needed
         ...(mode === "dark" && { default: gray[900], paper: "hsl(220, 30%, 7%)" }),
       },
       text: {

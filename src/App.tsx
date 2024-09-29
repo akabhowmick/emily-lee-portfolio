@@ -13,19 +13,19 @@ import RegisterPage from "./pages/RegisterPage";
 import CreatePost from "./pages/CreatePost";
 import BlogPostPage from "./pages/BlogPostPage";
 import EditBlogPost from "./pages/EditPostPage";
-import Blog from "./Blog";
 import Footer from "./components/Footer";
+import IndexPage from "./pages/IndexPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route index element={<Blog />} />
+      <Route index element={<IndexPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/create" element={<CreatePost />} />
       <Route path="/post/:id" element={<BlogPostPage />} />
       <Route path="/edit/:id" element={<EditBlogPost />} />
-      <Route path="*" element={<Blog />} />
+      <Route path="*" element={<IndexPage />} />
     </Route>
   )
 );

@@ -16,9 +16,9 @@ export default function IndexPage() {
 
   return (
     <>
-      <div className="bg-gray-100 min-h-screen">
+      <div className="min-h-screen">
         {/* Hero Section */}
-        <div className="text-center py-20 bg-white">
+        <div className="text-center py-20 ">
           <Container>
             <Typography variant="h2" component="h1" className="font-bold text-4xl mb-4">
               Welcome to my Blog!
@@ -48,7 +48,6 @@ export default function IndexPage() {
             </div>
           </Grid2>
         </Container>
-
       </div>
     </>
   );

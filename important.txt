@@ -31,4 +31,18 @@ nodemon index.js
 
 https://github.com/dejwid/mern-blog/blob/master/api/index.js
 https://cloud.mongodb.com/v2/66b39748a7842a601575b755#/metrics/replicaSet/66b397e865507f3a79f7fda1/explorer/test/users/find
-https://www.youtube.com/watch?v=xKs2IZZya7c&t=4s 1hr:41
+https://www.youtube.com/watch?v=xKs2IZZya7c&t=4s 
+
+
+TODO: 
+1. Deploy backend (check all the things work)
+  a. create post
+  b. create user
+  c. update post 
+  d. get posts
+  e. delete posts
+2. Deploy frontend 
+  a. redo all the links
+  b. the home page too different than the rest 
+3. Contact Page
+4. About Page
