@@ -58,6 +58,7 @@ export default function AppAppBar() {
     { name: "Angela Blogs", path: "/" },
     { name: "About Me", path: "/about" },
     { name: "Create a post", path: "/create" },
+    { name: "Contact Me", path: "/contact" },
   ];
 
   const logInOptions = [

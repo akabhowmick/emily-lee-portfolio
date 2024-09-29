@@ -16,4 +16,5 @@ export interface BlogPostInfo {
     _id: string;
     username: string;
   };
+  tag?: string;
 }

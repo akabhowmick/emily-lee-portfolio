@@ -45,4 +45,7 @@ TODO:
   a. redo all the links
   b. the home page too different than the rest 
 3. Contact Page
+  a. have it send emails 
 4. About Page
+  a. image with a short bio
+5. Resume Pages (?) => have the main content link to the resume in about me! 

@@ -8,8 +8,10 @@ import FormControl from "@mui/material/FormControl";
 import InputAdornment from "@mui/material/InputAdornment";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import { cardData } from "./cardData";
+// import { cardData } from "./cardData";
 import { StyledTypography, StyledCard, StyledCardContent, Author } from "./SharedMUIStyles";
+import { useEffect, useState } from "react";
+import { BlogPostInfo } from "../types/interfaces";
 
 export function Search() {
   return (
@@ -33,6 +35,15 @@ export function Search() {
 }
 
 export default function MainContent() {
+  const [posts, setPosts] = useState<BlogPostInfo[]>([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/post").then((response) => {
+      response.json().then((posts) => {
+        setPosts(posts);
+      });
+    });
+  }, []);
+
   //const [filterChips, setFilterChips] = React.useState<string[]>([]);
 
   const chipOptions = ["General", "Volunteering", "Debate", "Extracurricular", "College Prep"];
@@ -51,7 +62,7 @@ export default function MainContent() {
     console.info("You clicked the filter chip.");
   };
 
-  const mainContentCards = cardData.map((cardInfo) => {
+  const mainContentCards = posts.map((cardInfo) => {
     return (
       <Grid size={{ xs: 12, md: 6 }} key={cardInfo.title}>
         <StyledCard
@@ -64,7 +75,7 @@ export default function MainContent() {
           <CardMedia
             component="img"
             alt="green iguana"
-            image={cardInfo.img}
+            image={cardInfo.cover}
             aspect-ratio="16 / 9"
             sx={{
               borderBottom: "1px solid",
@@ -79,17 +90,20 @@ export default function MainContent() {
               {cardInfo.title}
             </Typography>
             <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-              {cardInfo.description}
+              {cardInfo.summary}
             </StyledTypography>
           </StyledCardContent>
-          <Author author={cardInfo.author} />
+          <Author
+            author={cardInfo.author.username.toUpperCase()}
+            dateCreated={cardInfo.createdAt}
+          />
         </StyledCard>
       </Grid>
     );
   });
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+    <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }} className="mt-4">
       <div>
         <Typography variant="h1" gutterBottom>
           Angela's Blog

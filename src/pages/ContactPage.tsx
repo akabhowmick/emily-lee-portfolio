@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-export default function ContactPage() {
+export const ContactPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -74,4 +74,4 @@ export default function ContactPage() {
       </Box>
     </Container>
   );
-}
+};
