@@ -1,5 +1,5 @@
 import * as React from "react";
-import { alpha, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,7 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { useUserContext } from "../providers/UserContext";
+import { useUserContext } from "../../providers/UserContext";
 
 // Styling for the toolbar
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -24,7 +24,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   backdropFilter: "blur(24px)",
   border: "1px solid",
   borderColor: theme.palette.divider,
-  backgroundColor: alpha(theme.palette.background.default, 0.4),
+  backgroundColor: "white",
   boxShadow: theme.shadows[1],
   padding: "8px 12px",
 }));

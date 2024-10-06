@@ -7,7 +7,6 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Layout from "./components/Layout";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import CreatePost from "./pages/CreatePost";
@@ -16,6 +15,8 @@ import EditBlogPost from "./pages/EditPostPage";
 import Footer from "./components/Footer";
 import IndexPage from "./pages/IndexPage";
 import { ContactPage } from "./pages/ContactPage";
+import { AboutMePage } from "./pages/AboutMePage";
+import Layout from "./components/Header/Layout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
       <Route path="/post/:id" element={<BlogPostPage />} />
       <Route path="/edit/:id" element={<EditBlogPost />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/about" element={<AboutMePage />} />
       <Route path="*" element={<IndexPage />} />
     </Route>
   )

@@ -12,6 +12,10 @@ const UserContext = createContext({} as UserContextType);
 export const UserProvider = ({ children }: { children: ReactNode }) => {
   //! Fix the default user later
   const [userInfo, setUserInfo] = useState({});
+
+  // const mainUser = { username: "Angela Tan", password: "Password1!" };
+  
+
   return (
     <UserContext.Provider
       value={{

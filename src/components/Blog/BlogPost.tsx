@@ -1,6 +1,5 @@
 import { formatISO9075 } from "date-fns";
 import { Link } from "react-router-dom";
-import { BlogPostInfo } from "../types/interfaces";
 
 import Grid from "@mui/material/Grid2";
 import { styled } from "@mui/system";
@@ -8,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import { BlogPostInfo } from "../../types/interfaces";
 
 export const BlogPost = ({ post }: { post: BlogPostInfo }) => {
   const { _id, title, summary, cover, content, createdAt, author } = post;

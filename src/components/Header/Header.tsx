@@ -1,25 +1,10 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import { useUserContext } from "../providers/UserContext";
+import { useUserContext } from "../../providers/UserContext";
 
 export default function Header() {
   const { setUserInfo, userInfo } = useUserContext();
-  useEffect(() => {
-    fetch("http://localhost:4000/profile", {
-      credentials: "include",
-    }).then((response) => {
-      response.json().then((userInfo) => {
-        setUserInfo(userInfo);
-      });
-    });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   function logout() {
-    fetch("http://localhost:4000/logout", {
-      credentials: "include",
-      method: "POST",
-    });
     setUserInfo({});
   }
 
@@ -28,7 +13,7 @@ export default function Header() {
   return (
     <header>
       <Link to="/" className="logo">
-        Angela Blogs! 
+        Angela Blogs!
       </Link>
       <nav>
         <Link to="/">Home</Link>
