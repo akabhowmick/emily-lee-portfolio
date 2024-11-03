@@ -32,10 +32,7 @@ export const BlogPost = ({ post }: { post: BlogInterface }) => {
   const StyledTypography = styled(Typography)({
     marginBottom: "12px",
   });
-
-  console.log(content.split("//break"));
-  console.log("helllo");
-
+  
   const paragraphs = content.split("//break").map((paragraph, index) => (
     <div key={index} className="content p-2">
       {paragraph.trim()} {/* Trim whitespace from each paragraph */}

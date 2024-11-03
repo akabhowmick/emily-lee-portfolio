@@ -54,7 +54,7 @@ export default function BlogPostPage() {
           on <time dateTime={date}>{date}</time>
         </p>
       </div>
-      <div className="w-1/2 mx-auto">
+      <div className="w-full md:w-2/3 lg:w-1/2 mx-auto">
         <img src={imageUrl} alt="blog-post-image" />
       </div>
       <div className="dark:text-gray-800 px-4">{paragraphs}</div>
