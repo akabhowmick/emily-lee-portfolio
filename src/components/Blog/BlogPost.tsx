@@ -7,9 +7,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { BlogPostInfo } from "../../types/interfaces";
+import { BlogInterface } from "../../types/interfaces";
 
-export const BlogPost = ({ post }: { post: BlogPostInfo }) => {
+export const BlogPost = ({ post }: { post: BlogInterface }) => {
   const { _id, title, summary, cover, content, createdAt, author } = post;
 
   // Styled components to match the card styles
@@ -33,6 +33,15 @@ export const BlogPost = ({ post }: { post: BlogPostInfo }) => {
     marginBottom: "12px",
   });
 
+  console.log(content.split("//break"));
+  console.log("helllo");
+
+  const paragraphs = content.split("//break").map((paragraph, index) => (
+    <div key={index} className="content p-2">
+      {paragraph.trim()} {/* Trim whitespace from each paragraph */}
+    </div>
+  ));
+
   return (
     <Grid size={{ xs: 12, md: 6 }} key={_id}>
       <StyledCard variant="outlined">
@@ -40,7 +49,7 @@ export const BlogPost = ({ post }: { post: BlogPostInfo }) => {
           <CardMedia
             component="img"
             alt={title}
-            image={`http://localhost:4000/${cover}`}
+            image={cover}
             sx={{
               aspectRatio: "16 / 9",
               borderBottom: "1px solid",
@@ -60,8 +69,7 @@ export const BlogPost = ({ post }: { post: BlogPostInfo }) => {
           <StyledTypography variant="body2" color="text.secondary" gutterBottom>
             {summary}
           </StyledTypography>
-          {/* TODO limit the characters here */}
-          <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+          <div>{paragraphs}</div>
         </StyledCardContent>
       </StyledCard>
     </Grid>

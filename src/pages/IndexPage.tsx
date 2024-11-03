@@ -1,14 +1,14 @@
 import "../App.css";
-import { Blogs } from "../components/Blog/Blogs";
+import { HomeBlogSection } from "../components/Blog/HomeBlogSection";
 import { Gallery } from "../components/Home/Gallery";
 import Hero from "../components/Home/Hero";
 
 export default function IndexPage() {
   return (
     <>
-      <div className="min-h-screen">
+      <div className="flex flex-col justify-center items-center">
         <Hero />
-        <Blogs />
+        <HomeBlogSection />
         <Gallery />
       </div>
     </>

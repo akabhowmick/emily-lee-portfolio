@@ -17,6 +17,7 @@ import IndexPage from "./pages/IndexPage";
 import { ContactPage } from "./pages/ContactPage";
 import { AboutMePage } from "./pages/AboutMePage";
 import Layout from "./components/Header/Layout";
+import { AllBlogsPage } from "./pages/AllBlogsPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +26,8 @@ const router = createBrowserRouter(
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/create" element={<CreatePost />} />
-      <Route path="/post/:id" element={<BlogPostPage />} />
+      <Route path="/blogs" element={<AllBlogsPage />} />
+      <Route path="/blogs/:id" element={<BlogPostPage />} />
       <Route path="/edit/:id" element={<EditBlogPost />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/about" element={<AboutMePage />} />
