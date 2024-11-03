@@ -12,7 +12,7 @@ export const AllBlogsPage = () => {
           return (
             <BlogBanner
               key={index}
-              imageUrl={post.cover}
+              imageUrl={post.imageUrl}
               label={post.tag || "General"}
               title={post.title}
               description={post.summary}

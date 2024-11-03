@@ -1,6 +1,6 @@
 import { blog1 } from "./fullBlogs/blog1";
 import { blog2 } from "./fullBlogs/blog2";
-import author_image from "../assets/kate-image.png";
+import author_image from "../assets/angela-image.png";
 
 export const recentBlogs = [blog1, blog2, blog1];
 

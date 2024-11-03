@@ -37,7 +37,7 @@ export const BlogBanner: React.FC<BlogBannerProps> = ({
               {label}
             </span>
           </div>
-          <h1 className="text-3xl font-semibold">{title}</h1>
+          <h1 className="text-3xl font-semibold pt-2">{title}</h1>
           <p className="flex-1 pt-2">{description}</p>
           <a
             rel="noopener noreferrer"

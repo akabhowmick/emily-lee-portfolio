@@ -36,7 +36,7 @@ export default function BlogPostPage() {
     },
   ];
 
-  const { title, author, date, content, tag, cover } = postInfo;
+  const { title, author, date, content, tag, imageUrl } = postInfo;
 
   const paragraphs = content.split("//break").map((paragraph, index) => (
     <p key={index} className="content p-2">
@@ -55,7 +55,7 @@ export default function BlogPostPage() {
         </p>
       </div>
       <div className="w-1/2 mx-auto">
-        <img src={cover} alt="blog-post-image" />
+        <img src={imageUrl} alt="blog-post-image" />
       </div>
       <div className="dark:text-gray-800 px-4">{paragraphs}</div>
       <div className="pt-12 border-t dark:border-gray-300">

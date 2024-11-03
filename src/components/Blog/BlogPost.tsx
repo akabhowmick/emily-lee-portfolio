@@ -10,7 +10,7 @@ import CardContent from "@mui/material/CardContent";
 import { BlogInterface } from "../../types/interfaces";
 
 export const BlogPost = ({ post }: { post: BlogInterface }) => {
-  const { _id, title, summary, cover, content, createdAt, author } = post;
+  const { _id, title, summary, imageUrl, content,  date, author } = post;
 
   // Styled components to match the card styles
   const StyledCard = styled(Card)({
@@ -49,7 +49,7 @@ export const BlogPost = ({ post }: { post: BlogInterface }) => {
           <CardMedia
             component="img"
             alt={title}
-            image={cover}
+            image={imageUrl}
             sx={{
               aspectRatio: "16 / 9",
               borderBottom: "1px solid",
@@ -59,7 +59,7 @@ export const BlogPost = ({ post }: { post: BlogInterface }) => {
         </Link>
         <StyledCardContent>
           <Typography variant="caption" color="text.secondary">
-            By {author.username} | <time>{formatISO9075(new Date(createdAt))}</time>
+            By {author.username} | <time>{formatISO9075(new Date( date))}</time>
           </Typography>
           <Typography variant="h6" component="div">
             <Link to={`/post/${_id}`} style={{ textDecoration: "none", color: "inherit" }}>

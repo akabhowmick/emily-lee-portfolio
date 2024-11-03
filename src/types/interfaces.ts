@@ -7,17 +7,15 @@ export interface BlogInterface {
   _id: string;
   title: string;
   summary: string;
-  cover: string;
-  content: string;
-  createdAt: string;
-  author: BlogAuthor;
-  tag?: string;
   imageUrl: string;
+  content: string;
+  date: string;
+  author: BlogAuthor;
+  tag?: string[];
   label: string;
   description: string;
   link: string;
   readTime: string;
-  date: string;
 }
 
 export interface UserInfo {
