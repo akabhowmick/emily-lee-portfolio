@@ -1,11 +1,12 @@
 import { blog1 } from "./fullBlogs/blog1";
 import { blog2 } from "./fullBlogs/blog2";
 import { blog3 } from "./fullBlogs/blog3";
+import { blog4 } from "./fullBlogs/blog4";
 import author_image from "../assets/angela-image.png";
 
-export const recentBlogs = [blog3, blog2, blog1];
+export const recentBlogs = [blog4, blog3, blog2,];
 
-export const fullBlogPosts = [blog3, blog2, blog1];
+export const fullBlogPosts = [blog4, blog3, blog2, blog1];
 
 export const authorData = {
   authorImage: author_image,
