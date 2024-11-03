@@ -16,7 +16,7 @@ export const BlogCard = ({
     <div className="w-full bg-white p-6 md:w-1/2 lg:w-1/3">
       <div className="max-w-[370px] mx-auto mb-10">
         <div className="rounded overflow-hidden mb-8">
-          <img src={imageUrl} alt="Blog" className="w-full" />
+          <img src={imageUrl} alt="Blog" className="w-full h-40" />
         </div>
         <div>
           <span className="rounded inline-block text-center py-1 text-xs leading-loose font-semibold text-black mb-5">

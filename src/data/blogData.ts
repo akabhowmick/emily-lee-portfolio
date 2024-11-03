@@ -9,5 +9,5 @@ export const fullBlogPosts = [blog2, blog1];
 export const authorData = {
   authorImage: author_image,
   authorDescription:
-    "Hi! I'm Angela . I look forward to sharing my high school experiences and exploring the medical field while inspiring others on a similar journey.",
+    "Hi! I'm Angela, a high school student at Saint Francis Prep, passionate about learning, debate, and personal growth. I look forward to sharing my high school experiences while inspiring others on a similar journey",
 };
