@@ -13,7 +13,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, alt, title, link }) => (
   <div className="relative snap-start scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
     <a href={link}>
       <img
-        className="h-[350px] sm:h-[450px] w-full sm:w-[280px]  lg:w-[332px]"
+        className="h-[250px] sm:h-[350px] w-full sm:w-[200px]  lg:w-[280px]"
         src={src}
         alt={alt}
       />

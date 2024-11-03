@@ -20,7 +20,7 @@ export const HomeBlogSection = () => {
       </div>
 
       {/* Map through the blogs array to generate BlogCards */}
-      <div className="flex sm:flex-wrap md:flex-nowrap gap-4 mx-auto justify-center">
+      <div className="flex flex-wrap md:flex-nowrap gap-4 mx-auto justify-center">
         {recentBlogs.map((blog, index) => (
           <BlogCard
             key={index}
