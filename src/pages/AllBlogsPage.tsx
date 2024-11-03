@@ -7,7 +7,7 @@ export const AllBlogsPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <SubPageTitle pageBannerInfo={allBlogsSubPageTitle} />
-      <div className="flex flex-col gap-4 p-8">
+      <div className="flex flex-col gap-4 py-2 md:p-8">
         {fullBlogPosts.map((post, index) => {
           return (
             <BlogBanner

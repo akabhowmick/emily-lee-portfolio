@@ -31,7 +31,7 @@ export const BlogBanner: React.FC<BlogBannerProps> = ({
             backgroundSize: "cover",
           }}
         ></div>
-        <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
+        <div className="flex flex-col p-3 md:p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
           <div className="flex justify-start">
             <span className="px-2 py-1 text-xs rounded-full dark:bg-violet-600 dark:text-gray-50">
               {label}
