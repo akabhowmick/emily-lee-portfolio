@@ -2,7 +2,7 @@ import { BlogInterface } from "../../types/interfaces";
 import blog2image from "../../assets/debate-image1.png";
 
 export const blog2: BlogInterface = {
-  _id: "unique_id_here",
+  _id: "week3",
   title: "Why I Chose Saint Francis Prep",
   summary:
     "Discovering a welcoming community, academic challenges, and exciting extracurriculars at Saint Francis Prep helped me choose this high school to start the next chapter of my life.",
@@ -22,7 +22,7 @@ export const blog2: BlogInterface = {
   label: "Education",
   description:
     "Why I chose Saint Francis Prep to begin my high school journey, from a supportive community to dynamic academics and extracurriculars.",
-  link: "link_to_blog_post_here",
+  link: "/blogs/week2",
   readTime: "5 min read",
   date: "2024-10-30",
 };

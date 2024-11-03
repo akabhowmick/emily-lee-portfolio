@@ -3,7 +3,7 @@ import blog1image from "../../assets/classroom.png";
 
 export const blog1: BlogInterface = {
   _id: "week1",
-  title: "Week 1: Introduction to My Journey",
+  title: "An Introduction to My Journey",
   summary:
     "Starting high school with a passion for learning, I'm eager to explore new opportunities, champion debate, and document my journey through writing and shared experiences.",
   imageUrl: blog1image,
