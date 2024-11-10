@@ -34,7 +34,7 @@ export default function AppAppBar() {
   const linksWithPaths = [
     { name: "Emily Blogs", path: "/" },
     { name: "About Me", path: "/about" },
-    { name: "All Blogs", path: "/blogs" },
+    { name: "All Art Pieces", path: "/blogs" },
     { name: "Contact Me", path: "/contact" },
   ];
 

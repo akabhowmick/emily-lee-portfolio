@@ -38,7 +38,7 @@ export default function MainContent() {
     <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }} className="mt-4">
       <div>
         <Typography variant="h3" gutterBottom>
-          View Latest Posts
+          View Latest Instagram Posts
         </Typography>
       </div>
       <Box

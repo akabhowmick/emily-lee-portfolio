@@ -11,10 +11,6 @@ export const HomeBlogSection = () => {
             <h2 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
               My recent posts
             </h2>
-            <p className="text-base text-body-color">
-              There are many variations of passages of Lorem Ipsum available but the majority have
-              suffered alteration in some form.
-            </p>
           </div>
         </div>
       </div>
