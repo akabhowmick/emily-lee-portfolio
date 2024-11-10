@@ -1,7 +1,7 @@
-import { BlogInterface } from "../../types/interfaces";
+import { ArtPieceInterface } from "../../types/interfaces";
 import blog2image from "../../assets/debate-image1.png";
 
-export const blog2: BlogInterface = {
+export const blog2: ArtPieceInterface = {
   _id: "week3",
   title: "Why I Chose Saint Francis Prep",
   summary:

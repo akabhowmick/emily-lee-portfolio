@@ -1,7 +1,7 @@
-import { BlogInterface } from "../../types/interfaces";
+import { ArtPieceInterface } from "../../types/interfaces";
 import blog4Image from "../../assets/week4-Image.png";
 
-export const blog4: BlogInterface = {
+export const blog4: ArtPieceInterface = {
   _id: "week4",
   title: "Exploring New Passions Through School Clubs",
   summary:

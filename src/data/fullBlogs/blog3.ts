@@ -1,7 +1,7 @@
-import { BlogInterface } from "../../types/interfaces";
+import { ArtPieceInterface } from "../../types/interfaces";
 import blog3image from "../../assets/debate-image2.png";
 
-export const blog3: BlogInterface = {
+export const blog3: ArtPieceInterface = {
   _id: "week3",
   title: "An Unforgettable Summer at ISSOS",
   summary:

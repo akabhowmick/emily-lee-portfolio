@@ -9,7 +9,7 @@ function Copyright() {
     <Typography variant="body2" sx={{ color: "text.secondary", my: 1 }}>
       {"Copyright © "}
       <Link color="text.secondary" href="/">
-        Emily Blogs!
+        Emily Lee!
       </Link>
       &nbsp;
       {new Date().getFullYear()}

@@ -32,7 +32,7 @@ export default function AppAppBar() {
 
   // Define navigation links
   const linksWithPaths = [
-    { name: "Emily Blogs", path: "/" },
+    { name: "Emily Lee", path: "/" },
     { name: "About Me", path: "/about" },
     { name: "All Art Pieces", path: "/blogs" },
     { name: "Contact Me", path: "/contact" },

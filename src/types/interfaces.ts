@@ -3,7 +3,7 @@ export interface BlogAuthor {
   username: string;
 }
 
-export interface BlogInterface {
+export interface ArtPieceInterface {
   _id: string;
   title: string;
   summary: string;

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { BlogInterface } from "../types/interfaces";
+import { ArtPieceInterface } from "../types/interfaces";
 import { authorData, fullBlogPosts } from "../data/blogData";
 import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 export default function BlogPostPage() {
-  const [postInfo, setPostInfo] = useState<BlogInterface | null | undefined>(null);
+  const [postInfo, setPostInfo] = useState<ArtPieceInterface | null | undefined>(null);
   const { id } = useParams();
   useEffect(() => {
     setPostInfo(fullBlogPosts.find((postInfo) => postInfo._id === id));

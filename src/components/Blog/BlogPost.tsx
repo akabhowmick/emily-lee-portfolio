@@ -7,9 +7,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { BlogInterface } from "../../types/interfaces";
+import { ArtPieceInterface } from "../../types/interfaces";
 
-export const BlogPost = ({ post }: { post: BlogInterface }) => {
+export const BlogPost = ({ post }: { post: ArtPieceInterface }) => {
   const { _id, title, summary, imageUrl, content,  date, author } = post;
 
   // Styled components to match the card styles
