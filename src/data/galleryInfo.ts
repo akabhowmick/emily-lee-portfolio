@@ -1,12 +1,15 @@
+import Week1Image from "../assets/Art_Pieces/Week_1_Ballerina.png";
+import Week5Image from "../assets/Art_Pieces/Week_5_Snoopy.png";
+
 export const galleryInfo = {
   title: "Instagram Posts Showcase",
   description: "View my most recent posts on Instagram!",
   images: [
     {
-      src: "https://images.unsplash.com/flagged/photo-1558963675-94dc9c4a66a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2plY3RzfGVufDB8fDB8fHww",
-      alt: "Image 1",
-      title: "Emily Instagram Posts Project 1",
-      link: "/instagram/post/1",
+      src: Week1Image,
+      alt: "Ballerina Image",
+      title: "Ballerina",
+      link: "https://www.instagram.com/ems_emsart7/p/C_ogWKMygEP/",
     },
     {
       src: "https://images.unsplash.com/photo-1605898011598-c5bbcf126cc5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -27,10 +30,10 @@ export const galleryInfo = {
       link: "/instagram/post/4",
     },
     {
-      src: "https://plus.unsplash.com/premium_photo-1661284852147-c2454d4c1ec7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2plY3RzfGVufDB8fDB8fHww",
-      alt: "Image 5",
-      title: "Emily Instagram Posts Project 5",
-      link: "/instagram/post/5",
+      src: Week5Image,
+      alt: "Snoopy Image",
+      title: "Snoopy",
+      link: "https://www.instagram.com/p/DCLAT-mNwjX/?utm_source=ig_web_copy_link",
     },
   ],
 };
