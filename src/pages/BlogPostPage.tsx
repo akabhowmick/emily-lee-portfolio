@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BlogInterface } from "../types/interfaces";
 import { authorData, fullBlogPosts } from "../data/blogData";
-import { FaInstagram, FaTiktok, FaX, FaYoutube } from "react-icons/fa6";
+import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 export default function BlogPostPage() {
   const [postInfo, setPostInfo] = useState<BlogInterface | null | undefined>(null);
@@ -14,11 +14,6 @@ export default function BlogPostPage() {
   if (!postInfo) return "";
 
   const socialLinks = [
-    {
-      href: "/",
-      label: "X",
-      icon: <FaX className="w-4 h-4 fill-current" />,
-    },
     {
       href: "/",
       label: "Instagram",

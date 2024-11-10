@@ -15,7 +15,7 @@ export const blog2: BlogInterface = {
   In a nutshell, Saint Francis Prep has everything I was looking for in a high school. The smaller student body creates a warm environment where meaningful relationships can flourish. The array of sports lets me explore my athletic passions, while the exciting extracurriculars allow me to pursue activities I love, like dance, and even try new things. With the strong academic offerings, including AP and Z period classes, I feel ready to challenge myself and prepare for my future. All of these fantastic elements combined make Saint Francis Prep the perfect place for the next chapter of my life!`,
   author: {
     _id: "1",
-    username: "Angela ",
+    username: "Emily ",
   },
   tag: "Education".split(" "),
   imageUrl: blog2image,

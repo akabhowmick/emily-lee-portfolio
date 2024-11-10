@@ -13,7 +13,7 @@ function Hero() {
             <h1 className="tracking-tighter text-white">
               <span className="font-serif italic font-normal text-4xl sm:text-7xl">Welcome to</span>
               <br />
-              <span className="font-sans font-normal text-6xl sm:text-8xl">Angela Blogs</span>
+              <span className="font-sans font-normal text-6xl sm:text-8xl">Emily Blogs</span>
             </h1>
 
             <p className="mt-5 font-sans text-base font-normal text-white text-opacity-70">

@@ -15,7 +15,7 @@ export const blog4: BlogInterface = {
     In the future, I would like to keep pursuing debate at school, art, volunteering, and maybe even joining sports teams like cheerleading. These different activities make up who I am.`,
   author: {
     _id: "1",
-    username: "Angela",
+    username: "Emily",
   },
   tag: "Extracurricular".split(" "),
   imageUrl: blog4Image,

@@ -17,7 +17,7 @@ export const blog3: BlogInterface = {
     My summer of 2024 was truly one of the most unforgettable yet.`,
   author: {
     _id: "1",
-    username: "Angela ",
+    username: "Emily ",
   },
   tag: "Extracurricular".split(" "),
   imageUrl: blog3image,
