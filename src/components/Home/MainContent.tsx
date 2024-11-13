@@ -28,7 +28,7 @@ export function Search() {
 }
 
 export default function MainContent() {
-  const chipOptions = ["General", "Volunteering", "Debate", "Extracurricular", "College Prep"];
+  const chipOptions = ["General", "Volunteering", "Art", "Extracurricular", "College Prep"];
 
   const handleClick = () => {
     console.info("You clicked the filter chip.");
