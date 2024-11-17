@@ -1,5 +1,5 @@
 import { ArtPieceInterface } from "../../types/interfaces";
-import blog1image from "../../assets/Art Pieces/Week_1_Ballerina.png";
+import blog1image from "../../assets/Art_Pieces/Week_1_Ballerina.png";
 
 export const blog1: ArtPieceInterface = {
   _id: "week1",
