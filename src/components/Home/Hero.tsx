@@ -2,9 +2,13 @@ import siteBg from "../../assets/Art_Pieces/Week_1_Ballerina.png";
 
 function Hero() {
   return (
-    <div className="relative pt-48 pb-12 w-full bg-black xl:pt-60 sm:pb-16 lg:pb-32 xl:pb-48 2xl:pb-56">
+    <div className="relative pt-48 pb-12 w-full bg-black xl:pt-60 sm:pb-16 lg:pb-32 xl:pb-48 2xl:pb-56 rounded-md">
       <div className="absolute inset-0 w-full rounded-md">
-        <img className="object-cover w-full h-full opacity-60 rounded-md" src={siteBg} alt="Hero Background" />
+        <img
+          className="object-cover w-full h-full opacity-60 rounded-md"
+          src={siteBg}
+          alt="Hero Background"
+        />
       </div>
 
       <div className="relative">

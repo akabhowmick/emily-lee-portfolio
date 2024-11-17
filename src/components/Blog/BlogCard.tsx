@@ -11,7 +11,7 @@ export const BlogCard = ({
   link: string;
 }) => {
   return (
-    <div className="w-full bg-orange-100 md:w-1/2 lg:w-1/3 h-70 md:h-70 rounded-md">
+    <div className="w-full bg-orange-100 md:w-1/2 lg:w-1/3 h-70 md:h-70 rounded-md m-4">
       <div className="mx-auto">
         <div className="rounded overflow-hidden">
           <img src={imageUrl} alt="Blog" className="w-full " />

@@ -1,4 +1,4 @@
-import { recentBlogs } from "../../data/blogData";
+import { recentBlogs, recentBlogs2 } from "../../data/blogData";
 import { BlogCard } from "./BlogCard";
 
 // Main BlogSection component
@@ -18,6 +18,19 @@ export const HomeBlogSection = () => {
       {/* Map through the blogs array to generate BlogCards */}
       <div className="flex flex-wrap lg:flex-nowrap gap-4 mx-auto justify-center">
         {recentBlogs.map((blog, index) => (
+          <BlogCard
+            key={index}
+            date={blog.date}
+            title={blog.title}
+            description={blog.description}
+            imageUrl={blog.imageUrl}
+            link={blog.link}
+          />
+        ))}
+      </div>
+      {/* Map through the blogs array to generate BlogCards */}
+      <div className="flex flex-wrap lg:flex-nowrap gap-4 mx-auto justify-center">
+        {recentBlogs2.map((blog, index) => (
           <BlogCard
             key={index}
             date={blog.date}
