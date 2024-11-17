@@ -17,7 +17,7 @@ a:hover {
 
 body {
   margin: 0;
-  /* background: url(https://img.freepik.com/free-vector/colorful-gradient-background-modern-design_361591-4679.jpg?t=st=1728230038~exp=1728233638~hmac=1fc1d58df6710d1de302f3d40f2d9fab342244fff5fed272af956379f21bc18b&w=1380); */
+  background: #ffe6ca;
   background-repeat: repeat-y; /* Prevents the image from repeating */
   background-size: cover; /* Stretches the image to cover the entire area */
   background-position: center; /* Centers the image */

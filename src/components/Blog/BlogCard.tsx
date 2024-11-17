@@ -11,16 +11,16 @@ export const BlogCard = ({
   link: string;
 }) => {
   return (
-    <div className="w-full bg-white p-2 md:w-1/2 lg:w-1/3 h-80">
-      <div className="max-w-[320px] mx-auto">
-        <div className="rounded overflow-hidden mb-8">
+    <div className="w-full bg-orange-100 md:w-1/2 lg:w-1/3 h-70 md:h-70 rounded-md">
+      <div className="mx-auto">
+        <div className="rounded overflow-hidden">
           <img src={imageUrl} alt="Blog" className="w-full " />
         </div>
         <div>
-          <h3>
+          <h3 className="text-center">
             <a
               href={link}
-              className="font-semibold lg:text-xl xl:text-2xl inline-block text-dark hover:text-primary"
+              className="font-semibold lg:text-xl xl:text-2xl inline-block text-dark hover:text-primary text-black underline m-0 p-2"
             >
               {title}
             </a>

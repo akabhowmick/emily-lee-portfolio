@@ -1,6 +1,6 @@
 import "../App.css";
 import { HomeBlogSection } from "../components/Blog/HomeBlogSection";
-import { Gallery } from "../components/Home/Gallery";
+// import { Gallery } from "../components/Home/Gallery";
 import Hero from "../components/Home/Hero";
 
 export default function IndexPage() {
@@ -9,7 +9,7 @@ export default function IndexPage() {
       <div className="flex flex-col justify-center items-center">
         <Hero />
         <HomeBlogSection />
-        <Gallery />
+        {/* <Gallery /> */}
       </div>
     </>
   );
