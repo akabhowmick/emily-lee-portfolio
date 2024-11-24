@@ -16,7 +16,7 @@ export const HomeBlogSection = () => {
       </div>
 
       {/* Map through the blogs array to generate BlogCards */}
-      <div className="flex flex-wrap lg:flex-nowrap gap-4 mx-auto justify-center">
+      <div className="flex flex-wrap lg:flex-nowrap gap-4 mx-auto justify-center items-center">
         {recentBlogs.map((blog, index) => (
           <BlogCard
             key={index}
@@ -29,9 +29,9 @@ export const HomeBlogSection = () => {
         ))}
       </div>
       {/* Map through the blogs array to generate BlogCards */}
-      <div className="flex flex-wrap lg:flex-nowrap gap-4 mx-auto justify-center">
+      <div className="flex flex-wrap lg:flex-nowrap gap-4 mx-auto justify-center items-center">
         {recentBlogs2.length > 0 &&
-          recentBlogs.map((blog, index) => (
+          recentBlogs2.map((blog, index) => (
             <BlogCard
               key={index}
               date={blog.date}
