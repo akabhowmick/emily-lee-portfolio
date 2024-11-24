@@ -5,7 +5,7 @@ import { blog4 } from "./fullBlogs/blog4";
 import author_image from "../assets/Emily-image.png";
 
 export const recentBlogs = [blog2, blog1, blog4];
-export const recentBlogs2 = [blog2, blog1, blog4];
+export const recentBlogs2 = [];
 
 export const fullBlogPosts = [blog2, blog1];
 
