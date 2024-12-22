@@ -1,22 +1,22 @@
 import { ArtPieceInterface } from "../../types/interfaces";
-import blog8Image from "../../assets/Art_Pieces/Week_8_Fish.png";
+import blog8Image from "../../assets/Art_Pieces/Week_8.png";
 
 export const blog8: ArtPieceInterface = {
   _id: "week8",
-  title: "The Fish",
-  content: `The fish in this sculpture is gutted, with people emerging from it—symbolizing the impact of human pollution on the ocean. My message behind this piece was to convey that by polluting the seas, we're not only harming the fish, but also ourselves. This was made from air-dry clay with a glossy acrylic finish, this piece was a reflection on our shared responsibility for the environment.`,
+  title: "Fashion",
+  content: `As an ex-aspiring fashion designer and an avid candy lover, I brought this fun vision to life to combine some of my favorite things through watercolor and colored pencil.`,
   summary:
-    "The fish in this sculpture is gutted, with people emerging from it—symbolizing the impact of human pollution on the ocean. My message behind this piece was to convey that by polluting the seas, we're not only harming the fish, but also ourselves. This was made from air-dry clay with a glossy acrylic finish, this piece was a reflection on our shared responsibility for the environment.",
+    "As an ex-aspiring fashion designer and an avid candy lover, I brought this fun vision to life to combine some of my favorite things through watercolor and colored pencil.",
   description:
-    "The fish in this sculpture is gutted, with people emerging from it—symbolizing the impact of human pollution on the ocean. My message behind this piece was to convey that by polluting the seas, we're not only harming the fish, but also ourselves. This was made from air-dry clay with a glossy acrylic finish, this piece was a reflection on our shared responsibility for the environment.",
+    "As an ex-aspiring fashion designer and an avid candy lover, I brought this fun vision to life to combine some of my favorite things through watercolor and colored pencil.",
   author: {
     _id: "1",
     username: "Emily",
   },
-  tag: "Sculpture".split(" "),
-  label: "Sculpture",
+  tag: "Watercolor".split(" "),
+  label: "Watercolor",
   imageUrl: blog8Image,
   link: "/blogs/week8",
-  readTime: "5 min read",
-  date: "2028-11-22",
+  readTime: "2 min read",
+  date: "2028-12-12",
 };

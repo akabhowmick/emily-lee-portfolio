@@ -1,9 +1,9 @@
 import { ArtPieceInterface } from "../../types/interfaces";
-import blog7Image from "../../assets/Art_Pieces/Week_7_Fish.png";
+import blog7Image from "../../assets/Art_Pieces/Week_7.png";
 
 export const blog7: ArtPieceInterface = {
   _id: "week7",
-  title: "The Fish",
+  title: "Calcifer",
   content: `Just finished this pop art piece inspired by my friend’s adorable cat, Calcifer! He’s a chunky, chirpy, and super friendly little guy with the cutest crispy meows, and the reason I fell in love with cats! I painted with acrylics to capture his playful spirit.`,
   summary:
     "Just finished this pop art piece inspired by my friend’s adorable cat, Calcifer! He’s a chunky, chirpy, and super friendly little guy with the cutest crispy meows, and the reason I fell in love with cats! I painted with acrylics to capture his playful spirit..",
