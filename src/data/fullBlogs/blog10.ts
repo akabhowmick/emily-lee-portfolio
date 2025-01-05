@@ -13,7 +13,7 @@ export const blog10: ArtPieceInterface = {
     _id: "1",
     username: "Emily",
   },
-  tag: "Soft Pastels".split(" "),
+  tag: "Soft Pastels".split("  "),
   label: "Soft Pastels",
   imageUrl: blog10Image,
   link: "/blogs/week10",
