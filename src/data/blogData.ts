@@ -10,14 +10,17 @@ import { blog9 } from "./fullBlogs/blog9";
 import { blog10 } from "./fullBlogs/blog10";
 import { blog11 } from "./fullBlogs/blog11";
 import { blog12 } from "./fullBlogs/blog12";
+import { blog13 } from "./fullBlogs/blog13";
+import { blog14 } from "./fullBlogs/blog14";
+import { blog15 } from "./fullBlogs/blog15";
 
 import author_image from "../assets/Emily-image.png";
 
-export const recentBlogs = [blog9, blog1, blog3];
-export const recentBlogs2 = [blog6, blog8, blog7];
-export const recentBlogs3 = [blog10, blog11, blog12];
+export const recentBlogs = [blog9, blog13, blog14];
+export const recentBlogs2 = [blog15, blog6, blog7];
+export const recentBlogs3 = [blog11, blog10, blog12];
 
-export const fullBlogPosts = [blog12, blog11, blog10, blog9, blog8, blog7, blog6, blog5, blog4, blog3, blog2, blog1];
+export const fullBlogPosts = [blog15, blog14, blog13, blog12, blog11, blog10, blog9, blog8, blog7, blog6, blog5, blog4, blog3, blog2, blog1];
 
 export const authorData = {
   authorImage: author_image,
