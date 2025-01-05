@@ -7,11 +7,15 @@ import { blog6 } from "./fullBlogs/blog6";
 import { blog7 } from "./fullBlogs/blog7";
 import { blog8 } from "./fullBlogs/blog8";
 import { blog9 } from "./fullBlogs/blog9";
+import { blog10 } from "./fullBlogs/blog10";
+import { blog11 } from "./fullBlogs/blog11";
+import { blog12 } from "./fullBlogs/blog12";
 
 import author_image from "../assets/Emily-image.png";
 
 export const recentBlogs = [blog9, blog1, blog3];
 export const recentBlogs2 = [blog6, blog8, blog7];
+export const recentBlogs3 = [blog10, blog11, blog12];
 
 export const fullBlogPosts = [blog9, blog8, blog7, blog6, blog5, blog4, blog3, blog2, blog1];
 

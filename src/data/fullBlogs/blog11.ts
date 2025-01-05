@@ -1,8 +1,8 @@
 import { ArtPieceInterface } from "../../types/interfaces";
-import blog10Image from "../../assets/Art_Pieces/Week_10.png";
+import blog11Image from "../../assets/Art_Pieces/Week_11.png";
 
-export const blog10: ArtPieceInterface = {
-  _id: "10",
+export const blog11: ArtPieceInterface = {
+  _id: "11",
   title: "",
   content: ``,
   summary:
@@ -15,8 +15,8 @@ export const blog10: ArtPieceInterface = {
   },
   tag: "".split(" "),
   label: "",
-  imageUrl: blog10Image,
-  link: "/blogs/10",
+  imageUrl: blog11Image,
+  link: "/blogs/11",
   readTime: "2 min read",
   date: "2025-01-",
 };
