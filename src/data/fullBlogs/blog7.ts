@@ -18,5 +18,5 @@ export const blog7: ArtPieceInterface = {
   imageUrl: blog7Image,
   link: "/blogs/week7",
   readTime: "5 min read",
-  date: "2027-11-29",
+  date: "2024-11-29",
 };
