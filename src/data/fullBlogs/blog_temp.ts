@@ -16,7 +16,7 @@ export const blogWeekNumber: ArtPieceInterface = {
   tag: "".split(" "),
   label: "",
   imageUrl: blogWeekNumberImage,
-  link: "/blogs/weekNumber",
+  link: "/blogs/week_WeekNumber",
   readTime: "2 min read",
   date: "2025-01-",
 };

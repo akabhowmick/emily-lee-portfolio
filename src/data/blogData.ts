@@ -17,7 +17,7 @@ export const recentBlogs = [blog9, blog1, blog3];
 export const recentBlogs2 = [blog6, blog8, blog7];
 export const recentBlogs3 = [blog10, blog11, blog12];
 
-export const fullBlogPosts = [blog9, blog8, blog7, blog6, blog5, blog4, blog3, blog2, blog1];
+export const fullBlogPosts = [blog12, blog11, blog10, blog9, blog8, blog7, blog6, blog5, blog4, blog3, blog2, blog1];
 
 export const authorData = {
   authorImage: author_image,
