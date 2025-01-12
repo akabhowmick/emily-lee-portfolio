@@ -3,7 +3,7 @@ import blog15Image from "../../assets/Art_Pieces/Week_15.png";
 
 export const blog15: ArtPieceInterface = {
   _id: "15",
-  title: "",
+  title: "M&M's",
   content: `Finished this colorful piece made entirely with colored pencils, inspired by my love for M&Ms, which is also the inspiration behind my nickname Em&Em’s.`,
   summary:
     "Finished this colorful piece made entirely with colored pencils, inspired by my love for M&Ms, which is also the inspiration behind my nickname Em&Em’s.",

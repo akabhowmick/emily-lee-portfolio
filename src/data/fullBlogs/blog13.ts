@@ -3,7 +3,7 @@ import blog13Image from "../../assets/Art_Pieces/Week_13.png";
 
 export const blog13: ArtPieceInterface = {
   _id: "13",
-  title: "",
+  title: "Forest",
   content: ``,
   summary:
     "",
