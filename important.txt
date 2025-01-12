@@ -1,2 +1,3 @@
 configure to have the social media 
-upload of the portfolio art pieces 
+
+add filters and pagination 
