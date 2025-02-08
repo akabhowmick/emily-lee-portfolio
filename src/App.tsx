@@ -38,10 +38,12 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <UserProvider>
-      <RouterProvider router={router} />
-      <Footer />
-    </UserProvider>
+    <div className="">
+      <UserProvider>
+        <RouterProvider router={router} />
+        <Footer />
+      </UserProvider>
+    </div>
   );
 }
 

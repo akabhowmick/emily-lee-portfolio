@@ -13,7 +13,7 @@ export const blog5: ArtPieceInterface = {
     _id: "1",
     username: "Emily",
   },
-  tag: "Digital Art".split(" "),
+  tag: "Digital Art".split(" ,"),
   label: "Digital Art",
   imageUrl: blog5Image,
   link: "/blogs/week5",

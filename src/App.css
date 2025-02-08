@@ -11,6 +11,7 @@ a {
 }
 body {
   color: #222;
+  cursor: url('./assets/custom_cursor.png') 0 0, auto;
 }
 img {
   max-width: 100%;

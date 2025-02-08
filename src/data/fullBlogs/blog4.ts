@@ -11,7 +11,7 @@ export const blog4: ArtPieceInterface = {
     _id: "1",
     username: "Emily",
   },
-  tag: "Digital Art".split(" "),
+  tag: "Digital Art".split(" ,"),
   imageUrl: blog4Image,
   label: "Digital Art",
   description:

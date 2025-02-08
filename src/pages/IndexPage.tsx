@@ -6,7 +6,7 @@ import Hero from "../components/Home/Hero";
 export default function IndexPage() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center ">
         <Hero />
         <HomeBlogSection />
         {/* <Gallery /> */}
